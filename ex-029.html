@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>陣列</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var colors = ["red", "yellow", "blue"];
+
+console.log( colors.length );       // 3
+
+
+ colors.push( "orange" );           // ["red", "yellow", "blue", "orange"]
+// console.log( colors ); 
+
+colors.shift();                   // ["yellow", "blue", "orange"]
+// console.log( colors ); 
+
+colors.pop();                     // ["yellow", "blue"]
+// console.log( colors ); 
+
+colors[1] = "pink";               // ["yellow", "pink"]
+// console.log( colors ); 
+
+colors = ["red", "yellow", "blue", "orange"];
+
+colors.forEach(function(element, index, array){
+   console.log("第 " + index + " 個元素是 " + element);
+});
+
+// 判斷元素是否存在陣列中
+console.log( colors.indexOf("red") );     // 0
+console.log( colors.indexOf("black") );   // -1
+
+</script>
+
+
+</body>
+</html>
