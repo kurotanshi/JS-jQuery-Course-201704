@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>animate with .stop()</title>
+
+  <style type="text/css">
+
+    div{
+      display: block;
+      width: 100px;
+      height: 20px;
+      background-color: #f00;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div></div>
+
+
+<script src="scripts/jquery-3.1.0.js"></script>
+
+<script type="text/javascript">
+
+  $('div').on('click', function(){
+
+     // 跳不停怎麼辦？ 用 .stop()
+     $(this).animate({'height': '+=50px'}, 1000);
+
+  });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> jQuery trigger </title>
+
+  <style type="text/css">
+    .block-a, .block-b{
+      display: block; margin-bottom: 20px;
+      width: 200px; height: 200px; line-height: 200px;
+      font-size: 50px; text-align: center;
+      border: 1px solid #000;
+    }
+
+
+
+  </style>
+
+</head>
+<body>
+
+
+<div class="block-a">A</div>
+
+<div class="block-b">B</div>
+
+
+<script src="scripts/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+
+$('.block-a').on('click', function(){
+  alert('A');
+
+  // 觸發 .block-b 的 click 事件
+  $('.block-b').trigger('click');
+});
+
+$('.block-b').on('click', function(){
+  alert('B');
+});
+
+
+
+</script>
+
+</body>
+</html>
