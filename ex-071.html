@@ -26,6 +26,7 @@
 
     .title{
       position: absolute;
+      display: none;
       left: 0; bottom: 0;
       height: 30px; width: 95%;
       padding-left: 5%;
@@ -79,7 +80,7 @@
   <script type="text/javascript">
 
   $('.img-list').on('click', function(){
-
+    $(this).children('.title').toggleClass('active');
   });
 
   </script>

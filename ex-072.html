@@ -84,7 +84,12 @@
         margin: 1em 0;
       }
       .content > div{
+        display: none;
         margin: 2em 0;
+      }
+
+      .content > .show{
+        display: block;
       }
 
     </style>
@@ -183,8 +188,17 @@
 
       // click .nav > li 時，透過 data-show 屬性來切換狀態。
       $('.nav > li').on('click', function(){
+        var show = $(this).data('show');
+
+        $('.show').removeClass('show');
+
+        $('.content-' + show).addClass('show');
 
       });
+
+
+
+
 
     </script>
 

@@ -70,6 +70,17 @@
     // code here
     e.preventDefault();
 
+    $('.main-image').html( $(this).html() );
+
+
+    // $('.main-image').children('img').attr('src',
+    //   $(this).children('img').attr('src'));
+
+
+    $('.active').removeClass('active');
+
+    $(this).addClass('active');
+
   });
 
   </script>

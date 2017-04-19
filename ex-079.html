@@ -77,10 +77,30 @@
   // 1. 加入展開與收合的判斷與文字
   // 2. 請完成展開的功能
 
+  var flag = true;
+
   $('.tag').on('click', function(e){
     e.preventDefault();
 
-    $('.window').animate({ 'left': '-140px' }, 1000);
+    if (flag){
+
+    $('.window').animate({ 'left': '-140px' }, 1000, function(){
+      $('.tag').text('展開');
+    });
+
+
+    }else{
+
+      $('.window').animate({ 'left': '0' }, 1000, function(){
+        $('.tag').text('收合');
+      });
+
+    }
+
+    flag = !flag;
+
+    // console.log( $('.window').position().left );
+    //
 
   });
 

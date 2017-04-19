@@ -29,7 +29,7 @@
   $('div').on('click', function(){
 
      // 跳不停怎麼辦？ 用 .stop()
-     $(this).animate({'height': '+=50px'}, 1000);
+     $(this).stop().animate({'height': '+=50px'}, 1000);
 
   });
 

@@ -38,7 +38,7 @@ $('.outer').on('click', function(e){
 
 // 加上 e.stopPropagation() 可防止事件往上攀升
 $('.inner').on('click', function(e){
-  // e.stopPropagation();
+  e.stopPropagation();
   alert('內層被點到了');
 });
 

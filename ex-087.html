@@ -14,23 +14,31 @@ Q:
         用 indexOf(n) 判斷某元素是否存在於陣列內。
 */
 
-var lottery = [];
-var number;
-
-while( lottery.length < 6 ){
-
-  number = parseInt( Math.random() * 49 + 1, 10 );
-
-  if( lottery.indexOf( number ) === -1 ){
-    lottery.push( number );
-  }
-}
-
-
 // todo: 包裝成 function ?
-var getLottery = function(){
+var getLottery = function( count ){
+
+  var g = function(){
+
+    var lottery = [];
+    var number;
+
+    while( lottery.length < 6 ){
+
+      number = parseInt( Math.random() * 49 + 1, 10 );
+
+      if( lottery.indexOf( number ) === -1 ){
+        lottery.push( number );
+      }
+    }
+    return lottery;
+
+  }
+
 
 };
+
+
+// getLottery( );
 
 
 </script>

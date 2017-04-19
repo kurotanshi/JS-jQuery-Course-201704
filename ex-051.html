@@ -14,6 +14,23 @@ Q:
         用 indexOf(n) 判斷某元素是否存在於陣列內。
 */
 
+  // Math.floor( Math.random() * 49 + 1 )
+
+  var arr = [];
+  var n;
+
+  while( arr.length < 6 ){
+    n = Math.floor( Math.random() * 49 + 1 );
+
+    if ( arr.indexOf( n ) === -1){
+      arr.push(n);
+    }
+
+  }
+
+  console.log( arr );
+
+
 </script>
 
 </body>

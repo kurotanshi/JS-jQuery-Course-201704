@@ -43,8 +43,18 @@
 
   <script type="text/javascript">
 
+  var flag = false;
+
   // todo: 把前一個練習中的全選/取消合併成一個按鈕
   $('.btn-allChecked').on('click', function(){
+
+    if( flag ){
+      $('input[name="chkbox"]').prop('checked', false);
+    }else{
+      $('input[name="chkbox"]').prop('checked', true);
+    }
+
+    flag = !flag;
 
   });
 

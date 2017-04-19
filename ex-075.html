@@ -79,8 +79,8 @@
 
   <script type="text/javascript">
 
-  $('.img-list').on('click', function(){
-
+  $('.img-list').on('mouseenter mouseleave', function(){
+    $(this).find('.title').stop().slideToggle();
   });
 
   </script>

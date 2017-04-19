@@ -96,8 +96,18 @@
 <script src="scripts/jquery-3.1.0.js"></script>
 <script>
 
-// 1. 將右側區塊的 Heading 1 ~ 6 的標題樣式改成 16px, 藍色 (#00f)，但只有 Heading 2 是紅色 (#f00)。
-// 2. 將藍色的按鈕 ( .btn-primary ) 改成紅色的 ( .btn-danger )
+
+$('.block h2').css({ 'font-size': '16px',
+                     'color': 'blue'  });
+
+$('.block h2').eq(1).css('color', 'red');
+
+
+$('.more').removeClass('btn-primary')
+          .addClass('btn-danger');
+
+
+
 
 </script>
 

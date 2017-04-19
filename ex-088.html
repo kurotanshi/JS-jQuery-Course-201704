@@ -11,11 +11,11 @@
   var foo = 1;
 
   var doSomeThing = function (bar){
-    var foo = 2;
+    foo = 2;
     return foo + bar;
   };
 
-  //foo = 100;
+  foo = 100;
 
   console.log( doSomeThing(3) );   // ?
   console.log( foo );              // ?

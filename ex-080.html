@@ -191,7 +191,20 @@
     <script type="text/javascript">
 
       // 判斷瀏覽器捲軸位置，用 $(document).scrollTop()
+
       $(window).on('scroll', function(){
+
+        window.setTimeout(function(){
+
+          console.log( $(document).scrollTop() );
+
+        }, 100);
+
+        // if( $(document).scrollTop() < 160 ){
+        //   $('.go-top').hide();
+        // }else{
+        //   $('.go-top').show();
+        // }
 
       });
 
@@ -199,6 +212,8 @@
       // 透過 animate & scrollTop: 0 將捲軸送至頂端
       $('.go-top').on('click', function(e){
         e.preventDefault();
+
+        $('html, body').animate({ scrollTop: 0 }, 1000);
 
       });
 

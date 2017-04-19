@@ -51,6 +51,22 @@
   <script type="text/javascript">
     // todo: 更改內文的文字大小
 
+    $('.text-handler button').on('click', function(){
+
+      if( $(this).hasClass('text-small') ){
+        $('.text-field').css('font-size', '12px');
+      }
+
+      if( $(this).hasClass('text-normal') ){
+        $('.text-field').css('font-size', '16px');
+      }
+
+      if( $(this).hasClass('text-large') ){
+        $('.text-field').css('font-size', '20px');
+      }
+
+    });
+
 
   </script>
 

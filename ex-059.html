@@ -48,7 +48,7 @@
     var lottery = [], number, n;
 
     while( lottery.length < 6 ){
-      number =  parseInt( Math.random() * 49 + 1, 10 );
+      number = parseInt( Math.random() * 49 + 1, 10 );
 
       if( lottery.indexOf( number ) === -1 ){
         lottery.push( number );
@@ -63,7 +63,15 @@
     }
 
     // 1. 把號碼列出至 .lottery-result > span 中。
+    $('.lottery-result > span').text(lottery);
+
     // 2. 把被選中的號碼加入 highlight class
+    for( i = 0; i < lottery.length; i++ ){
+      console.log( lottery[i] );
+      $('.lottery-nums div').eq( lottery[i] - 1).addClass('highlight');
+    }
+
+    // $('.lottery-nums div').addClass('highlight');
 
   </script>
 
